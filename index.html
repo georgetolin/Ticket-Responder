@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Support Email Composer — Copilot Space</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Support Email Composer</h1>
+    <p class="subtitle">Compose, personalize, and preview support replies — fully offline.</p>
+  </header>
+
+  <main class="container">
+    <section class="sidebar">
+      <div class="panel">
+        <h3>Context</h3>
+        <label>Client name
+          <input id="clientName" placeholder="e.g., Jane Doe" />
+        </label>
+        <label>Agent name
+          <input id="agentName" placeholder="e.g., Alex Rivera" />
+        </label>
+        <label>Ticket number
+          <input id="ticketNumber" placeholder="e.g., TCK-2025-001" />
+        </label>
+        <label>Issue summary
+          <textarea id="issueSummary" rows="3" placeholder="Paste the customer's issue or email here..."></textarea>
+        </label>
+        <div class="quick-actions">
+          <button id="detectIssue" class="btn">Detect Issue Type</button>
+          <button id="testTemplateBtn" class="btn">Test Template</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Templates</h3>
+        <input id="templateSearch" placeholder="Search templates..." />
+        <div id="templateList" class="template-list"></div>
+        <div class="template-controls">
+          <button id="newTemplate" class="btn">New</button>
+          <button id="saveTemplate" class="btn-primary">Save</button>
+          <button id="deleteTemplate" class="btn-danger">Delete</button>
+        </div>
+        <div class="import-export">
+          <button id="exportTemplates" class="btn">Export .json</button>
+          <input id="importInput" type="file" accept="application/json" />
+        </div>
+      </div>
+    </section>
+
+    <section class="editor-area">
+      <!-- Inserted Tone Selector & AI Suggestion Panel (per scaffold) -->
+      <div class="tone-selector">
+        <h4>Response Tone</h4>
+        <div class="tone-buttons">
+          <button class="tone-btn active" data-tone="friendly">😊 Friendly</button>
+          <button class="tone-btn" data-tone="formal">💼 Formal</button>
+          <button class="tone-btn" data-tone="apologetic">🙏 Apologetic</button>
+          <button class="tone-btn" data-tone="proactive">🚀 Proactive</button>
+        </div>
+      </div>
+
+      <div class="ai-suggestion-panel">
+        <h4>AI Smart Suggestions</h4>
+        <textarea id="aiSuggestionBox" placeholder="AI-suggested reply will appear here..." readonly></textarea>
+        <div class="panel-actions">
+          <button id="generateSuggestion" class="btn-primary">Generate Suggestion</button>
+          <button id="applySuggestion" class="btn-success">Apply to Editor</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Template Editor</h3>
+        <label>Title
+          <input id="templateTitle" placeholder="Template title" />
+        </label>
+        <label>Category / Tags
+          <input id="templateTags" placeholder="comma-separated tags e.g., login,billing" />
+        </label>
+        <label>Body
+          <textarea id="templateBody" rows="12" placeholder="Use tokens like {{client_name}}, {{agent_name}}, {{ticket_number}}, {{current_date}}"></textarea>
+        </label>
+      </div>
+
+      <div class="preview-section panel">
+        <h3>Live Preview</h3>
+        <div id="preview" class="preview-box" aria-live="polite"></div>
+        <div class="preview-actions">
+          <button id="copyPreview" class="btn">Copy</button>
+          <button id="clearDraft" class="btn">Clear Draft</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <small>All data stays in your browser. Templates saved to localStorage.</small>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
