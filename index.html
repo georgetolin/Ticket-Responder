@@ -4,7 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Support Email Composer — Copilot Space</title>
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Use explicit relative paths so GitHub Pages resolves assets under the repo subpath -->
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <header class="app-header">
@@ -51,7 +53,7 @@
     </section>
 
     <section class="editor-area">
-      <!-- Inserted Tone Selector & AI Suggestion Panel (per scaffold) -->
+      <!-- Tone Selector & AI Suggestion Panel -->
       <div class="tone-selector">
         <h4>Response Tone</h4>
         <div class="tone-buttons">
@@ -100,6 +102,7 @@
     <small>All data stays in your browser. Templates saved to localStorage.</small>
   </footer>
 
-  <script type="module" src="app.js"></script>
+  <!-- Load the app script (relative path) -->
+  <script src="./app.js"></script>
 </body>
 </html>
