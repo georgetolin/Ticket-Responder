@@ -1,0 +1,16 @@
+{
+  "name": "support-email-composer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Support Email Composer — offline first; optional AI adapters",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5173",
+    "deploy:ghpages": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "gh-pages": "^5.0.0"
+  }
+}
