@@ -1,0 +1,13 @@
+﻿Adds a server-side AI proxy scaffold to the Ticket-Responder repository.
+
+- Express server with /api/ai endpoint
+- Pluggable adapters:
+  - rulebased: deterministic local reply generator (safe fallback)
+  - openai: server-side proxy to OpenAI (requires OPENAI_API_KEY)
+- Rate limiting and security headers via helmet
+- Dockerfile + README for local dev & deployment
+
+Notes:
+- Configure server/.env (copy from .env.example) — do NOT commit secrets
+- Update CORS_ORIGIN for production
+- The client can call POST /api/ai { context, tone, provider } to generate replies.
