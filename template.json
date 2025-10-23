@@ -1,0 +1,32 @@
+{
+  "templates": [
+    {
+      "id": "tmpl-login-1",
+      "title": "Login assistance — reset & steps",
+      "category": "login",
+      "tags": ["login", "password", "access"],
+      "body": "Hi {{client_name}},\n\nThanks for contacting us about the login issue. Please try the following steps:\n\n1. Make sure your email is correct.\n2. Click “Forgot password” to reset your password.\n3. Clear your browser cache or try an incognito window.\n\nIf you still can’t sign in, reply to this message and we’ll reset your password from our side.\n\nBest regards,\n{{agent_name}}\nTicket: {{ticket_number}}\nDate: {{current_date}}"
+    },
+    {
+      "id": "tmpl-password-reset",
+      "title": "Password reset confirmation",
+      "category": "account",
+      "tags": ["password", "reset", "security"],
+      "body": "Hello {{client_name}},\n\nWe’ve completed the password reset for your account. You should receive an email with a secure link. If you don't see it, please check your spam folder.\n\nIf you'd like, we can walk you through a secure password update over the phone.\n\nBest regards,\n{{agent_name}}\n{{ticket_number}} | {{current_date}}"
+    },
+    {
+      "id": "tmpl-billing-general",
+      "title": "Billing inquiry acknowledgment",
+      "category": "billing",
+      "tags": ["billing","invoice","charges"],
+      "body": "Hi {{client_name}},\n\nThanks for reaching out about your billing question. I’ve forwarded your inquiry to our billing team and they will review the charge. We’ll update you within 2 business days.\n\nBest regards,\n{{agent_name}}\nTicket: {{ticket_number}}"
+    },
+    {
+      "id": "tmpl-generic",
+      "title": "Generic acknowledgement",
+      "category": "general",
+      "tags": ["acknowledgement","general"],
+      "body": "Hi {{client_name}},\n\nThank you for contacting us regarding {{issue_summary}}. We’re looking into this and will follow up soon with next steps.\n\nBest regards,\n{{agent_name}}\n{{current_date}}"
+    }
+  ]
+}
